@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Willow House — Household Budget Planner</title>
+<meta name="description" content="Willow House: a household budget planner. Track income and spending, set category budgets and savings goals, month by month.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<div class="brand">
+<span class="brand-mark" aria-hidden="true">⌂</span>
+<div>
+<h1>Willow House</h1>
+<p>Household budget planner</p>
+</div>
+</div>
+<nav class="mainnav" aria-label="Sections">
+<a href="#/dashboard" data-route="dashboard">Dashboard</a>
+<a href="#/transactions" data-route="transactions">Transactions</a>
+<a href="#/budgets" data-route="budgets">Budgets</a>
+<a href="#/goals" data-route="goals">Goals</a>
+<a href="#/insights" data-route="insights">Insights</a>
+</nav>
+</header>
+<main>
+<section class="monthbar" aria-label="Month">
+<button id="month-prev" type="button" aria-label="Previous month">‹ Prev</button>
+<h2 id="month-name">November 2026</h2>
+<button id="month-next" type="button" aria-label="Next month">Next ›</button>
+</section>
+<p class="sample-note" id="sample-note">Sample data for the Rivera household — realistic demo figures. <button id="reset-sample" type="button">Reset sample data</button> <button id="clear-all" type="button">Clear all data</button></p>
+<div id="view" aria-live="polite"></div>
+</main>
+<footer>
+<p>Willow House keeps every figure on this device. No account, no tracking, no network requests — your budget never leaves your browser.</p>
+<p><a href="#/insights">How we work out your insights</a> · <a href="#/budgets">Set a category budget</a> · <a href="#/goals">Start a savings goal</a></p>
+</footer>
+<script type="module" src="main.js"></script>
+</body>
+</html>

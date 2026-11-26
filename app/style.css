@@ -1,0 +1,119 @@
+:root{
+--green:#1f6f4a;--green-d:#145c3c;--cream:#f7f3ea;--paper:#fffdf7;
+--ink:#22301f;--muted:#6b7a68;--line:#e3ddcc;--gold:#d9a441;
+--red:#b3402e;--blue:#2e6f8e;--radius:14px;
+--shadow:0 2px 10px rgba(34,48,31,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);
+font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.5}
+h1,h2,h3,.num{font-family:'Trebuchet MS',Verdana,sans-serif}
+a{color:var(--green)}
+button{font-family:inherit;cursor:pointer}
+.topbar{background:var(--green);color:#fff;padding:14px 20px;
+display:flex;flex-wrap:wrap;gap:16px;align-items:center;
+justify-content:space-between}
+.brand{display:flex;gap:12px;align-items:center}
+.brand-mark{font-size:34px;line-height:1;background:var(--gold);
+color:#22301f;border-radius:50%;width:52px;height:52px;
+display:flex;align-items:center;justify-content:center}
+.brand h1{margin:0;font-size:26px;letter-spacing:.5px}
+.brand p{margin:0;opacity:.85;font-size:14px}
+.mainnav{display:flex;gap:4px;flex-wrap:wrap}
+.mainnav a{color:#fff;text-decoration:none;padding:8px 13px;
+border-radius:999px;font-family:'Trebuchet MS',Verdana,sans-serif}
+.mainnav a:hover{background:rgba(255,255,255,.16)}
+.mainnav a.active{background:var(--gold);color:#22301f;font-weight:700}
+main{max-width:1080px;margin:0 auto;padding:20px 18px 40px}
+.monthbar{display:flex;align-items:center;justify-content:space-between;
+gap:12px;margin:4px 0 10px}
+.monthbar h2{margin:0;font-size:26px;color:var(--green-d)}
+.monthbar button,.sample-note button{border:1px solid var(--green);
+background:#fff;color:var(--green);border-radius:999px;
+padding:7px 14px;font-weight:700}
+.monthbar button:hover{background:var(--green);color:#fff}
+.sample-note{background:#fdf6dd;border:1px dashed var(--gold);
+border-radius:10px;padding:9px 14px;font-size:14px;color:#5c4a1e}
+.sample-note button{padding:3px 10px;font-size:13px;margin-left:6px}
+footer{max-width:1080px;margin:0 auto;padding:0 18px 30px;
+color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+padding:16px 18px;box-shadow:var(--shadow)}
+.card span{color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+.card strong{display:block;font-size:30px;margin:4px 0}
+.card small{color:var(--muted)}
+.card.income strong{color:var(--green)}
+.card.spent strong{color:var(--red)}
+.card.balance{background:var(--green);color:#fff;border-color:var(--green)}
+.card.balance span,.card.balance small{color:#d8ead9}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{background:var(--paper);border:1px solid var(--line);
+border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.panel h2{margin:0 0 12px;font-size:19px;color:var(--green-d)}
+.bars{margin-top:10px}
+.bar-row{display:grid;grid-template-columns:110px 1fr 74px;gap:10px;
+align-items:center;margin:7px 0;font-size:14px}
+.bar-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{display:block;height:12px;background:#efe9d8;border-radius:999px;overflow:hidden}
+.bar-track.wide{height:14px}
+.bar-fill{display:block;height:100%;border-radius:999px}
+.bar-fill.over{background:#b3402e}
+.bar-value{text-align:right;font-weight:700;font-family:'Trebuchet MS',Verdana,sans-serif}
+.donut{display:block;margin:6px auto}
+.donut-total{font-size:19px;font-weight:700;fill:var(--ink);font-family:'Trebuchet MS',Verdana,sans-serif}
+.donut-cap{font-size:12px;fill:var(--muted)}
+.txns{width:100%;border-collapse:collapse;font-size:15px}
+.txns th{text-align:left;color:var(--muted);font-size:13px;
+text-transform:uppercase;letter-spacing:.05em;padding:6px 4px;border-bottom:2px solid var(--line)}
+.txns td{padding:8px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
+.txns td:nth-child(2){white-space:nowrap}
+.txns .amt{text-align:right;white-space:nowrap;font-weight:700}
+.txns .amt.in{color:var(--green)}
+.txns .amt.out{color:var(--ink)}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12.5px;
+color:#fff;background:var(--chip,#8a8a7a)}
+.row-actions{white-space:nowrap;text-align:right}
+.row-actions button{border:1px solid var(--line);background:#fff;
+border-radius:8px;padding:3px 9px;font-size:13px;margin-left:4px}
+form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:10px}
+form label{display:flex;flex-direction:column;gap:5px;font-weight:700;font-size:14px}
+form input,form select{padding:9px 11px;border:1px solid var(--line);
+border-radius:9px;font-size:15px;font-family:inherit;background:#fff}
+form input:focus,form select:focus{outline:2px solid var(--green);outline-offset:1px}
+.primary{background:var(--green);color:#fff;border:0;border-radius:999px;
+padding:11px 20px;font-weight:700;font-size:15px;grid-column:1/-1}
+.primary:hover{background:var(--green-d)}
+.hint{grid-column:1/-1;color:var(--muted);font-size:13px;margin:0}
+.filter{display:block;margin:4px 0 12px;font-weight:700}
+.filter input{margin-left:8px;min-width:240px;padding:8px 11px;
+border:1px solid var(--line);border-radius:9px;font-size:15px}
+.budget-row{border-top:1px solid var(--line);padding:14px 0}
+.budget-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.budget-head span{color:var(--muted);font-size:14px}
+.budget-row label{display:flex;align-items:center;gap:8px;
+margin-top:8px;font-size:14px;font-weight:700}
+.budget-row input{width:110px;padding:6px 9px;border:1px solid var(--line);border-radius:8px}
+.goal-nums{font-size:16px}
+.fund-form{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}
+.fund-form label{flex:1;min-width:160px}
+.fund-form button{border:1px solid var(--green);background:#fff;color:var(--green);
+border-radius:999px;padding:9px 16px;font-weight:700}
+.tips{padding-left:20px}
+.tips li{margin:10px 0}
+.big{font-size:26px;font-weight:700;color:var(--green-d);margin:8px 0}
+.big small{font-size:15px;color:var(--muted);font-weight:400}
+@media (max-width:760px){
+.cards{grid-template-columns:1fr}
+.grid2{grid-template-columns:1fr}
+form{grid-template-columns:1fr}
+.topbar{padding:12px 14px}
+.brand h1{font-size:22px}
+.mainnav a{padding:7px 10px;font-size:14px}
+.monthbar h2{font-size:21px}
+.card strong{font-size:26px}
+.bar-row{grid-template-columns:86px 1fr 66px;font-size:13px}
+.txns{font-size:14px}
+.row-actions button{margin:2px 0 2px 4px}
+main{padding:14px 12px 30px}
+}
